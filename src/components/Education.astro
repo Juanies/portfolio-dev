@@ -1,0 +1,26 @@
+---
+import { Code, Debug } from "astro:components"
+import EducationItem from "./EducationItem.astro"
+
+    const EDUCATION = [
+        {
+            date: "2023 -  Actualidad",
+            title: "Desarrollo de Aplicaciones Multiplataforma",
+            place: "I.E.S Celia Viñas",
+            description: "Conocimientos obtenidos en desarrollo de software multiplataforma, diseño de interfaces gráficos, seguridad informática y bases de datos. Capacidades adquiridas para desempeñar roles como desarrollador de software, programador Java y Android, y otras funciones en el ámbito de la consultoría informática."
+        },
+        {
+            date: "2021 -  2022",
+            title: "Sistemas Microinformáticos y Redes",
+            place: "I.E.S Celia Viñas",
+            description: "Conocimientos obtenidos en instalación y mantenimiento de sistemas y redes, así como en desarrollo web, gestión empresarial y seguridad informática. Preparación para desempeñar roles como técnico en mantenimiento de sistemas informáticos, servicios de Internet y redes locales."
+        }
+    ]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+    EDUCATION.map((e) => (
+        <EducationItem {...e}/>
+    ))
+    }
+</ol>
