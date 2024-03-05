@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Badge from '../components/Badge.astro'
+import Github from '../components/icons/Github.astro'
+import Linkedin from '../components/icons/Linkedin.astro'
+import SocialPills from '../components/icons/SocialPills.astro'
+import Mail from '../components/icons/Mail.astro'
+import Experience from '../components/icons/Experience.astro'
+import Section from '../components/Section.astro'
+import Briefcase from '../components/icons/Briefcase.astro'
+
+---
+
+<Layout
+	title="Portfolio de Juanies - Desarrollador y programador web"
+	description="Contrata a Juanies para crear tu aplicación web o escritorio. Desarrollador web y de Software. Especializado en crear aplicaciones únicas "
+>
+	<main class="px-4">
+		<Section class="py-44 pb-20">
+			<h1 class="text-white text-2xl lg:text-5xl font-bold  lg:pb-10 flex flex-row gap-x-4 pb-10" >
+				Hey, Soy Juanies <a
+				href="https://www.linkedin.com/in/juan-romero-b549b3260/"
+				target="_blank"
+				rel="noopener"
+				class="flex justify-center items-center">
+				<Badge>Disponible para trabajar</Badge></a>
+			</h1>
+			<h2 class="text-2xl opacity-80 text-wrap max-w-[700px]">
+				Desarrollador web y de software. De  Almería, España. Buscando oportunidades para aplicar habilidades en la creación de aplicaciones únicas.
+			</h2>
+			<nav class="flex gap-x-2 mt-5 flex-wrap gap-4">
+					<SocialPills href="https://github.com/Juanies">
+						<Github class="size-4 lg:size-6" />
+						Github
+					</SocialPills>
+					<SocialPills href="https://www.linkedin.com/in/juan-romero-b549b3260/" >
+						<Linkedin class="size-4 lg:size-6" />
+						Linkedin
+					</SocialPills>
+					<SocialPills href="mailto:juanromeroviudez@gmail.com" >
+						<Mail class="size-4 lg:size-6" />
+						juanromeroviudez@gmail.com
+					</SocialPills>
+			</nav>
+		</Section>
+		<Section id="sobremi">
+			<h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center"> <Briefcase  class="size-8"/>Educación</h2>
+			<Experience />
+		</Section>
+
+	</main>
+</Layout>
