@@ -22,8 +22,13 @@ const {description, title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body  class="overflow-x-hidden	">
+<<<<<<< HEAD
 		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		<Header/>
+=======
+		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950" style="background-image: radial-gradient(ellipse at 50% -20%, rgba(255, 215, 94, .2), rgba(145, 126, 126, 0));"></div>
+		<Header />
+>>>>>>> e12ba337f24fdca964772275e2b64314fae58dac
 		<slot />
 	</body>
 </html>
@@ -35,10 +40,13 @@ const {description, title } = Astro.props;
 	body{
 		display: flex;
 		flex-direction: column;
+<<<<<<< HEAD
 		min-height: 100dvh;
 		--tw-bg-opacity: 1;
 		align-items: center;
     	background-color: rgb(10 10 10 / var(--tw-bg-opacity));
+=======
+>>>>>>> e12ba337f24fdca964772275e2b64314fae58dac
 	}
 
 	html {
