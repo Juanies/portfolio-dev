@@ -1,0 +1,27 @@
+---
+    import ProjectItem from '../components/ProjectItem.astro'
+    const PROYECTOS = [
+        {
+            title: "Pescaderia Carenero",
+            description: "Pescadería Carenero, una empresa especializada en productos marinos artesanales, ha dado el salto hacia la modernización a",
+            img: "https://www.dariochic.dev/pescaderiacarenero.webp",
+            url: "https://carenero-pescaderia.vercel.app/",
+            stack: ["React", "NextJS", "Figma", "WhatshaapApi"]
+        },
+        {
+            title: "Pescaderia Carenero",
+            description: "Pescadería Carenero, una empresa especializada en productos marinos artesanales, ha dado el salto hacia la modernización a",
+            img: "https://www.dariochic.dev/pescaderiacarenero.webp",
+            url: "https://carenero-pescaderia.vercel.app/",
+            stack: ["React", "NextJS", "Figma", "WhatshaapApi"]
+        }
+    ]
+---
+
+<section>
+    {
+    PROYECTOS.map((e) => (
+        <ProjectItem {...e}/>
+    ))
+    }
+</section>
