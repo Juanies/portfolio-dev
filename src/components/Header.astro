@@ -1,9 +1,35 @@
-<header class="flex justify-center items-center py-3 " >
+<header class="flex justify-center items-center " >
     <nav class="flex gap-10 text-[17px]">
-        <a class="opacity-90  hover:opacity-100" title="#" href="#">Inicio</a>
-        <a class="opacity-90 hover:opacity-100"  title="#" href="#">Experiencia</a>
-        <a class="opacity-90 hover:opacity-100"  title="#" href="#">Proyectos</a>
-        <a class="opacity-90 hover:opacity-100"  title="#" href="#">Para mí</a>
-        <a class="opacity-90 hover:opacity-100"  title="#" href="#">Contacto</a>
+        <a class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400  " title="#" href="#">Inicio</a>
+        <a class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400 "  title="#" href="#">Experiencia</a>
+        <a class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400 "  title="#" href="#">Proyectos</a>
+        <a class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400 "  title="#" href="#">Para mí</a>
+        <a class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400 "  title="#" href="#">Contacto</a>
     </nav>
 </header>
+
+
+<style>
+
+    header{
+        position: sticky;
+        animation: adjust-header linear both;
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+        padding: .1em 2em .1em 2em;
+        backdrop-filter:  blur(2px);
+        top: 2%;
+        color: rgb(229 231 235, 1);
+        font-weight: 500;
+        border-radius: 4em;
+
+    }
+
+    @keyframes adjust-header{
+        to{
+            background-color: #b3b3b385;
+            z-index: 3;
+        }
+    }
+
+</style>
