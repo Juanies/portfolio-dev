@@ -23,8 +23,26 @@
 
 <section>
     {
-    PROYECTOS.map((e) => (
-        <ProjectItem {...e}/>
+    PROYECTOS.map((e, index) => (
+        <ProjectItem {...e} key={index}/>
     ))
     }
 </section>
+
+<script>
+    const elementosLi = document.getElementsByClassName("projectitem");
+    const elementosArray = Array.from(elementosLi);
+
+    elementosArray.forEach(e => {
+        e.getElementsByTagName("a")[0].addEventListener('mouseenter', () => {
+            const imgElement = e.getElementsByTagName("a")[0];
+            imgElement.classList.remove("translate-x-0");
+            imgElement.classList.add("translate-x-[-5em]");
+        });
+        e.getElementsByTagName("a")[0].addEventListener('mouseleave', () => {
+            const imgElement = e.getElementsByTagName("a")[0];
+            imgElement.classList.remove("translate-x-[-5em]");
+            imgElement.classList.add("translate-x-0");
+        });
+    });
+</script>

@@ -1,14 +1,19 @@
 ---
-    const {title, description, img, url, stack, github} = Astro.props
+    const {title, description, img, url, stack, github, index} = Astro.props
 
     import GitHub from "../components/icons/GitHub.astro"
     import Export from "../components/icons/Export.astro"
 
+
+
 ---
 
-<article class="w-[740px]  mt-5 flex pb-32 items-center justify-end relative">
-    <a href={url} class="absolute top-0">
-        <img id="imgpro" class="w-[50%] rounded 	 imgpro object-contain -z-10" src={img} alt={title}>
+
+
+
+<article class="projectitem w-[740px] mt-32 flex items-center justify-end relative" >
+    <a href={url} class="absolute left-[0] top-0 w-[50%] duration-300">
+        <img id="imgpro" class="  rounded imgpro object-contain -z-10" src={img} alt={title}>
     </a>
 
     <div class="flex w-[60%] z-0  flex-col">
@@ -27,6 +32,10 @@
             {github && <a class="hover:scale-[1.3] hover:text-yellow-300 transition" target="_blank" href={github}><GitHub></GitHub></a>}
             {url && <a class="hover:scale-[1.3] hover:text-yellow-300 transition fill-red" target="_blank" href={url}><Export></Export></a>}
         </div>
-
     </div>
 </article>
+
+<script>
+
+
+</script>
