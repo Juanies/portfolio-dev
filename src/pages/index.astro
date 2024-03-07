@@ -6,6 +6,7 @@ import EducationItem from '../components/EducationItem.astro';
 import Proyectos from '../components/icons/Proyectos.astro'
 import Proyect from '../components/Project.astro'
 import Globalicon from '../components/Globalicon.astro'
+import GitHub from "../components/icons/GitHub.astro"
 
 ---
 
@@ -15,10 +16,23 @@ import Globalicon from '../components/Globalicon.astro'
 >
 		<Globalicon/>
 	<>
-		<main class="lg:width-[720px] ">
-			<section id="inicio" class="lg:w-[740px] w-full text-white text-4xl font-bold flex justify-center flex-col pt-44 pb-16">
-				<h1>Hey, soy Juan Romero</h1>
-				<h2 class="py-6 text-2xl opacity-80 font-[400]">Busco fusionar la estética con la usabilidad, creando una armonía perfecta entre el diseño visual y la funcionalidad en cada línea de código, mientras busco activamente oportunidades para aplicar mi experiencia como desarrollador web y de software.			</h2>
+		<main class=" ">
+			<section id="inicio" class="lg:w-[740px] w-full text-white text-4xl  flex justify-center flex-col pt-44 pb-16">
+				<h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">Hey, soy Juan Romero</h1>
+				<hp class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">Busco fusionar la estética con la usabilidad, creando una armonía perfecta entre el diseño visual y la funcionalidad en cada línea de código, mientras <strong>busco oportunidades</strong> para aplicar mi experiencia como desarrollador web y de software.			</hp>
+				<nav class="flex flex-wrap gap-4 mt-8 font-normal ">
+					<a href="mailto:juanromeroviudez@gmail.com" target="_blank" rel="noopener noreferrer" role="link" class="inline-flex items-center justify-center text-xl gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">  <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"></path><path d="M3 6l9 6l9 -6"></path><path d="M15 18h6"></path><path d="M18 15l3 3l-3 3"></path></svg>
+						juanromeroviudez@gmail.com
+					</a>
+					<a href="https://github.com/Juanies" target="_blank" rel="noopener noreferrer" role="link" class="inline-flex items-center justify-center text-xl gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+						<GitHub></GitHub>
+						Git
+					</a>
+					<a href="https://www.linkedin.com/in/juanies/" target="_blank" rel="noopener noreferrer" role="link" class="inline-flex items-center justify-center text-xl gap-2 px-4 py-1 text-gray-800 transition bg-gray-100 border border-gray-300 rounded-full dark:bg-gray-800 dark:border-gray-600 dark:text-white focus-visible:ring-yellow-500/80 text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+						Linkedin
+					</a>
+				</nav>
 			</section>
 			<section id="educacion" class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
 				<h2 class="text-2xl flex items-center gap-x-4 font-bold pb-6"> <School></School>EDUCACIÓN</h2>
