@@ -11,12 +11,12 @@
 
 
 
-<article class="projectitem w-[740px] mt-32 flex items-center justify-end relative" >
-    <a href={url} class="absolute left-[0] top-0 w-[50%] duration-300">
-        <img id="imgpro" class="  rounded imgpro object-contain -z-10" src={img} alt={title}>
+<article class="projectitem lg:w-[740px] mb-32 flex flex-col gap-3 w-[100%] items-center justify-end relative" >
+    <a href={url} class="lg:absolute left-[0] top-0 lg:w-[50%] duration-300">
+        <img id="imgpro" class="  rounded imgpro object-contain  -z-10" src={img} alt={title}>
     </a>
 
-    <div class="flex w-[60%] z-0  flex-col">
+    <div class="flex lg:w-[60%] z-0  flex-col">
         <div class="flex gap-x-2 justify-end pb-3 flex-wrap">
             {
                 stack.map((e: string) => (
