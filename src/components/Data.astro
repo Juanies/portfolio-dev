@@ -1,0 +1,39 @@
+---
+const token = import.meta.env.SECRET_TOKEN;
+
+const response = await fetch("https://api.github.com/users/juanies/repos", {
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+});
+
+const json = await response.json();
+const hoy = new Date();
+
+function separarfecha(fecha) {
+  return new Date(fecha);
+}
+
+function calcularDiferencia(fecha) {
+  const fechaItem = separarfecha(fecha);
+  const diffTime = Math.abs(hoy.getTime() - fechaItem.getTime());
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+  if (diffDays > 365) {
+    return `${Math.floor(diffDays / 365)} años`;
+  } else {
+    return `${diffDays} días`;
+  }
+}
+
+---
+
+<ul>
+  {
+    json.map(item => (
+      <li>
+        {item.name} - Último cambio hace {calcularDiferencia(item.updated_at)}.
+      </li>
+    ))
+  }
+</ul>

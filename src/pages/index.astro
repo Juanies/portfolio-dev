@@ -1,0 +1,241 @@
+---
+import Data from "../components/Data.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <div
+    class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+  >
+  </div>
+  <div
+    class="absolute before:content-[] grow-shrink-animation blur-lg top-40 left-[20rem] z-[-1] rounded-full h-[30rem] w-[20rem] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(12,223,170,0.3),rgba(255,255,255,0))]"
+  >
+  </div>
+  <main class="flex flex-col items-center relative">
+    <div class="flex self-start flex-col">
+      <h1 class="text-[4trm]">Juan Romero</h1>
+      <p>uwu</p>
+    </div>
+
+    <div class="relative w-full">
+      <h2
+        class="absolute text-gradient text-[4rem] top-[-2.5rem] text-center w-full left-1/2 transform -translate-x-1/2"
+      >
+        Tabla de precios
+      </h2>
+      <div class="relative w-full mt-16 overflow-x-auto sm:rounded-lg">
+        <table class="text-sm w-full text-left rtl:text-right text-gray-400">
+          <thead class="text-xs backdrop-blur uppercase">
+            <tr>
+              <th scope="col" class="p-[32px] gradient">Tipo de página</th>
+              <th scope="col" class="p-[32px] gradient py-3">Nº de páginas</th>
+              <th scope="col" class="p-[32px] gradient py-3">Solo diseño</th>
+              <th scope="col" class="p-[32px] gradient py-3"
+                >Diseño + Montaje</th
+              >
+              <th scope="col" class="p-[32px] gradient py-3"
+                >Diseño + Montaje + Copy</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-[#1F1F1F]">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-[#b3b3b311] dark:text-white"
+              >
+                Muy corta
+              </th>
+              <td class="px-6 bg-[#b3b3b311] py-4">1</td>
+              <td class="px-6 bg-[#b3b3b311] py-4">$58.50</td>
+              <td class="px-6 bg-[#b3b3b311] py-4">$90.00</td>
+              <td class="px-6 bg-[#b3b3b311] py-4">$126.00</td>
+            </tr>
+            <tr <tr class="bg-[#1F1F1F]">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 bg-[#1d1d1d] whitespace-nowrap dark:text-white"
+              >
+                Corta
+              </th>
+              <td class="px-6 py-4 bg-[#1F1F1F]">2 - 3</td>
+              <td class="px-6 py-4 bg-[#1F1F1F]">$146.25</td>
+              <td class="px-6 py-4 bg-[#1F1F1F]">$225.00</td>
+              <td class="px-6 py-4 bg-[#1F1F1F]">$315.00</td>
+            </tr>
+            <tr class="bg-[#1F1F1F]">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 bg-[#b3b3b311] whitespace-nowrap dark:text-white"
+              >
+                Mediana
+              </th>
+              <td class="px-6 py-4 bg-[#b3b3b311]">4 - 6</td>
+              <td class="px-6 py-4 bg-[#b3b3b311]">$224.25</td>
+              <td class="px-6 py-4 bg-[#b3b3b311]">$345.00</td>
+              <td class="px-6 py-4 bg-[#b3b3b311]">$483.00</td>
+            </tr>
+            <tr class="bg-[#1F1F1F]">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium text-gray-900 bg-[#1d1d1d] whitespace-nowrap dark:text-white"
+              >
+                Larga
+              </th>
+              <td class="px-6 py-4 bg-[#1F1F1F]">7 - 12</td>
+              <td class="px-6 py-4 bg-[#1F1F1F]">$405.60</td>
+              <td class="px-6 py-4 bg-[#1F1F1F]">$624.00</td>
+              <td class="px-6 py-4 bg-[#1F1F1F]">$873.60</td>
+            </tr>
+            <tr class="bg-[#1F1F1F]">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium bg-[#b3b3b311] text-gray-900 whitespace-nowrap dark:text-white"
+              >
+                Muy larga
+              </th>
+              <td class="px-6 py-4 bg-[#b3b3b311]">12 - 16</td>
+              <td class="px-6 py-4 bg-[#b3b3b311]">$526.50</td>
+              <td class="px-6 py-4 bg-[#b3b3b311]">$810.00</td>
+              <td class="px-6 py-4 bg-[#b3b3b311]">$1134.00</td>
+            </tr>
+            <tr class="bg-[#1F1F1F]">
+              <th
+                scope="row"
+                class="px-6 py-4 font-medium bg-[#b3b3b311] text-gray-900 whitespace-nowrap dark:text-white"
+              >
+                Otro
+              </th>
+              <td colspan={4} class="px-6 py-4 bg-[#b3b3b311]">
+                <a class="text-2xl" href="" title="">Contacta con nosotros</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <Data/>
+  </main>
+
+  <style>
+    main {
+      margin: auto;
+      padding: 1rem;
+      width: 1000px;
+      max-width: calc(100% - 2rem);
+      color: white;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .text-gradient {
+      background: linear-gradient(115deg, #8533ff, #00b3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      letter-spacing: 0.2rem;
+      font-size: 6rem;
+    }
+
+    @keyframes growShrink {
+      0%,
+      100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .conic-gradient {
+      background: conic-gradient(
+        from 180deg at 50% 50%,
+        #333 0deg,
+        #333 176deg,
+        #61dafb 193deg,
+        #333217deg,
+        #333 1turn
+      );
+    }
+
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    }
+
+    .grow-shrink-animation {
+      animation: growShrink 5s ease-in-out infinite;
+    }
+
+    .gradient {
+      background-image: linear-gradient(20deg, #0d0d0d, #1f1f1f40);
+    }
+
+    .instructions {
+      margin-bottom: 2rem;
+      border: 1px solid rgba(var(--accent-light), 25%);
+      background: linear-gradient(
+        rgba(var(--accent-dark), 66%),
+        rgba(var(--accent-dark), 33%)
+      );
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    table,
+    tr,
+    th,
+    td {
+      border: 2px solid #6464645d;
+      border-collapse: collapse;
+    }
+
+    th {
+      color: #fff;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    td:nth-child(2) {
+      color: rgb(255, 255, 255);
+    }
+
+    td:nth-child(3) {
+      color: #fc8e07;
+    }
+
+    td:nth-child(4) {
+      color: #c1d61e;
+    }
+
+    td:nth-child(5) {
+      color: #1dee2e;
+    }
+
+    .instructions code {
+      font-size: 0.8em;
+      font-weight: bold;
+      background: rgba(var(--accent-light), 12%);
+      color: rgb(var(--accent-light));
+      border-radius: 4px;
+      padding: 0.3em 0.4em;
+    }
+
+    .instructions strong {
+      color: rgb(var(--accent-light));
+    }
+  </style>
+</Layout>
