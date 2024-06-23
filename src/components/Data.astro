@@ -7,9 +7,24 @@ const response = await fetch("https://api.github.com/users/juanies/repos", {
   },
 });
 
+async function commits(namerepo) {
+  const commits = await fetch(
+    `https://api.github.com/repos/juanies/${namerepo}/commits`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  const commitsData = await commits.json();
+  const countComiits = commitsData.length;
+  return countComiits == 30 ? "+30" : countComiits;
+}
+
 const json = await response.json();
 const hoy = new Date();
-
+console.log(json);
 function separarfecha(fecha) {
   return new Date(fecha);
 }
@@ -20,20 +35,42 @@ function calcularDiferencia(fecha) {
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
   if (diffDays > 365) {
-    return `${Math.floor(diffDays / 365)} años`;
+    return `${Math.floor(diffDays / 365)} year ago`;
+  } else if (diffDays > 31) {
+    return `${calcularMesesPasados(fechaItem)} month ago`;
   } else {
-    return `${diffDays} días`;
+    return `${diffDays} days ago`;
   }
 }
 
+function calcularMesesPasados(fecha) {
+  const fechaItem = separarfecha(fecha);
+  const yearDiff = hoy.getFullYear() - fechaItem.getFullYear();
+  const monthDiff = hoy.getMonth() - fechaItem.getMonth();
+
+  return yearDiff * 12 + monthDiff;
+}
+
+console.log(json);
 ---
 
-<ul>
+<ul class="mt-4 flex flex-col gap-4">
   {
     json.map(item => (
-      <li>
-        {item.name} - Último cambio hace {calcularDiferencia(item.updated_at)}.
-      </li>
+      <article class="bg-red-100  p-4 rounded flex flex-col gap-4 text-red-600">
+        <h2>{item.name}</h2>
+        <p>{item.description}</p>
+        <div>
+          <div>
+            {item.language}
+            {"Updated " + calcularDiferencia(item.updated_at)}
+          </div>
+          <div class="flex gap-2">
+            <p>{item.stargazers_count}</p>
+            <p>{commits(item.name)}</p>
+          </div>
+        </div>
+      </article>
     ))
   }
 </ul>
