@@ -22,7 +22,14 @@ async function commits(namerepo) {
   return countComiits == 30 ? "+30" : countComiits;
 }
 
-const json = await response.json();
+let json = await response.json();
+const page = 1;
+const totalpages = Math.ceil(json.length / 4);
+
+console.log(totalpages);
+
+json = json.slice(0, 4);
+
 const hoy = new Date();
 console.log(json);
 function separarfecha(fecha) {
@@ -54,23 +61,28 @@ function calcularMesesPasados(fecha) {
 console.log(json);
 ---
 
-<ul class="mt-4 flex flex-col gap-4">
-  {
-    json.map(item => (
-      <article class="bg-red-100  p-4 rounded flex flex-col gap-4 text-red-600">
-        <h2>{item.name}</h2>
-        <p>{item.description}</p>
-        <div>
+<>
+  <ul class="mt-4 flex flex-wrap gap-4">
+    {
+      json.map(item => (
+        <article class="bg-[#333] border-[#616161] border w-[49%]  p-4 rounded flex flex-col gap-4 text-[#ff]">
+          <h2>{item.name}</h2>
+          <p>{item.description}</p>
           <div>
-            {item.language}
-            {"Updated " + calcularDiferencia(item.updated_at)}
+            <div>
+              {item.language}
+              {" Updated " + calcularDiferencia(item.updated_at)}
+            </div>
+            <div class="flex gap-2">
+              <p>{item.stargazers_count}</p>
+              <p>{commits(item.name)}</p>
+            </div>
           </div>
-          <div class="flex gap-2">
-            <p>{item.stargazers_count}</p>
-            <p>{commits(item.name)}</p>
-          </div>
-        </div>
-      </article>
-    ))
-  }
-</ul>
+        </article>
+      ))
+    }
+  </ul>
+  <div>
+    
+  </div>
+</>
