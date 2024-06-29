@@ -1,6 +1,7 @@
 ---
 import Data from "../components/Data.astro";
 import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -19,11 +20,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div class="relative w-full">
-      <h2
-        class="absolute text-gradient text-[4rem] top-[-2.5rem] text-center w-full left-1/2 transform -translate-x-1/2"
-      >
-        Tabla de precios
-      </h2>
+      <Title text="Tabla de precios"></Title>
       <div class="relative w-full mt-16 overflow-x-auto sm:rounded-lg">
         <table class="text-sm w-full text-left rtl:text-right text-gray-400">
           <thead class="text-xs backdrop-blur uppercase">
@@ -129,17 +126,7 @@ import Layout from "../layouts/Layout.astro";
       line-height: 1.6;
     }
 
-    .text-gradient {
-      background: linear-gradient(115deg, #8533ff, #00b3ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
-      font-weight: 800;
-      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-      letter-spacing: 0.2rem;
-      font-size: 6rem;
-    }
+    
 
     @keyframes growShrink {
       0%,

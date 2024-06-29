@@ -1,0 +1,23 @@
+---
+const { text } = Astro.props;
+---
+
+<h2
+  class="absolute text-gradient text-[4rem] top-[-2.5rem] text-center w-full left-1/2 transform -translate-x-1/2"
+>
+  {text}
+</h2>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(115deg, #8533ff, #00b3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 6rem;
+  }
+</style>
